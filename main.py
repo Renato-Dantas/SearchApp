@@ -1,6 +1,6 @@
 #pyuic5 design.ui -o design.py
 from sys import argv
-from PyQt5.QtWidgets import QMainWindow, QApplication
+from PyQt5.QtWidgets import QMainWindow, QApplication, QComboBox
 from design import Ui_Main
 from sqlStructure import sqliteFunctions
 
@@ -23,6 +23,8 @@ class main(QMainWindow, Ui_Main, sqliteFunctions):
         
         for area in areaList:
             self.cbArea.addItem(area)
+            self.cbAreaRegistro.addItem(area)
+            self.cbAreaUpdate.addItem(area)
 
 
     # Retorna uma lista com as áreas possíveis
@@ -39,7 +41,7 @@ class main(QMainWindow, Ui_Main, sqliteFunctions):
     def cancelAction(self):
         self.iptId.setText('')
         self.iptNome.setText('')
-        self.iptArea.setText('')
+        self.cbAreaRegistro.setCurrentIndex(0)
         self.iptCidade.setText('')
         self.iptEmail.setText('')
         self.iptTelefone.setText('')
@@ -52,7 +54,7 @@ class main(QMainWindow, Ui_Main, sqliteFunctions):
     def get_info(self):
         cod = self.iptId.text()
         nome = self.iptNome.text()
-        area = self.iptArea.text()
+        area = self.cbAreaRegistro.currentText()
         cidade = self.iptCidade.text()
         email = self.iptEmail.text()
         fone1 = self.iptTelefone.text()

@@ -109,7 +109,8 @@
         </property>
         <property name="styleSheet">
          <string notr="true">QPushButton{color: #fff;}
-QPushButton:hover{ background-color: gold; color: black}</string>
+QPushButton:hover{ background-color: gold; color: black;font: 63 12pt &quot;Segoe UI Semibold&quot;;}
+</string>
         </property>
         <property name="text">
          <string>Registro</string>
@@ -126,7 +127,7 @@ QPushButton:hover{ background-color: gold; color: black}</string>
         </property>
         <property name="styleSheet">
          <string notr="true">QPushButton{color: #fff;}
-QPushButton:hover{ background-color: gold; color: black}</string>
+QPushButton:hover{ background-color: gold; color: black;font: 63 12pt &quot;Segoe UI Semibold&quot;;}</string>
         </property>
         <property name="text">
          <string>Consulta</string>
@@ -143,7 +144,7 @@ QPushButton:hover{ background-color: gold; color: black}</string>
         </property>
         <property name="styleSheet">
          <string notr="true">QPushButton{color: #fff;}
-QPushButton:hover{ background-color: gold; color: black}</string>
+QPushButton:hover{ background-color: gold; color: black;font: 63 12pt &quot;Segoe UI Semibold&quot;;}</string>
         </property>
         <property name="text">
          <string>Update</string>
@@ -166,7 +167,7 @@ QPushButton:hover{ background-color: gold; color: black}</string>
      <item>
       <widget class="QStackedWidget" name="stackedWidget">
        <property name="currentIndex">
-        <number>2</number>
+        <number>1</number>
        </property>
        <widget class="QWidget" name="pgRegistro">
         <widget class="QLabel" name="label_2">
@@ -336,24 +337,6 @@ QPushButton:hover{ background-color: gold; color: black}</string>
             </property>
             <property name="text">
              <string>Área de Atuação:</string>
-            </property>
-           </widget>
-          </item>
-          <item row="2" column="1">
-           <widget class="QLineEdit" name="iptArea">
-            <property name="font">
-             <font>
-              <family>Segoe UI Semibold</family>
-              <pointsize>14</pointsize>
-              <weight>75</weight>
-              <bold>true</bold>
-             </font>
-            </property>
-            <property name="styleSheet">
-             <string notr="true">background: white; color: black;</string>
-            </property>
-            <property name="alignment">
-             <set>Qt::AlignCenter</set>
             </property>
            </widget>
           </item>
@@ -597,6 +580,34 @@ QPushButton:hover{ background-color: gold; color: black}</string>
             </property>
            </widget>
           </item>
+          <item row="2" column="1">
+           <widget class="QComboBox" name="cbAreaRegistro">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Minimum">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>10</height>
+             </size>
+            </property>
+            <property name="font">
+             <font>
+              <family>Segoe UI Semibold</family>
+              <pointsize>12</pointsize>
+              <weight>7</weight>
+              <italic>false</italic>
+              <bold>false</bold>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QComboBox{background:white; color:black; font: 63 12pt &quot;Segoe UI Semibold&quot;;}</string>
+            </property>
+           </widget>
+          </item>
          </layout>
         </widget>
         <widget class="QWidget" name="horizontalLayoutWidget">
@@ -624,7 +635,10 @@ QPushButton:hover{ background-color: gold; color: black}</string>
              </size>
             </property>
             <property name="styleSheet">
-             <string notr="true">background: rgb(39,39,39); color: #fff;</string>
+             <string notr="true">QPushButton{background: rgb(39,39,39); color: #fff; font: 63 10pt &quot;Segoe UI Semibold&quot;;;}
+
+QPushButton:hover{ background-color: gold; color: rgb(0, 0, 127); font: 87 12pt &quot;Segoe UI Black&quot;;}
+</string>
             </property>
             <property name="text">
              <string>Save</string>
@@ -646,7 +660,12 @@ QPushButton:hover{ background-color: gold; color: black}</string>
              </size>
             </property>
             <property name="styleSheet">
-             <string notr="true">background: rgb(39,39,39); color: #fff;</string>
+             <string notr="true">QPushButton{background: rgb(39,39,39); color: #fff;
+	font: 63 10pt &quot;Segoe UI Semibold&quot;;
+}
+QPushButton:hover{ background-color: rgb(166, 1, 1); color: white;
+	font: 63 12pt &quot;Segoe UI Semibold&quot;;}
+</string>
             </property>
             <property name="text">
              <string>Cancel</string>
@@ -720,11 +739,17 @@ QPushButton:hover{ background-color: gold; color: black}</string>
            <x>30</x>
            <y>130</y>
            <width>721</width>
-           <height>22</height>
+           <height>31</height>
           </rect>
          </property>
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>10</height>
+          </size>
+         </property>
          <property name="styleSheet">
-          <string notr="true">background: white;</string>
+          <string notr="true">QComboBox{background:white; color:black; font: 63 12pt &quot;Segoe UI Semibold&quot;;}</string>
          </property>
         </widget>
        </widget>
@@ -896,24 +921,6 @@ QPushButton:hover{ background-color: gold; color: black}</string>
             </property>
             <property name="text">
              <string>Área de Atuação:</string>
-            </property>
-           </widget>
-          </item>
-          <item row="2" column="1">
-           <widget class="QLineEdit" name="iptArea_2">
-            <property name="font">
-             <font>
-              <family>Segoe UI Semibold</family>
-              <pointsize>14</pointsize>
-              <weight>75</weight>
-              <bold>true</bold>
-             </font>
-            </property>
-            <property name="styleSheet">
-             <string notr="true">background: white; color: black;</string>
-            </property>
-            <property name="alignment">
-             <set>Qt::AlignCenter</set>
             </property>
            </widget>
           </item>
@@ -1157,6 +1164,26 @@ QPushButton:hover{ background-color: gold; color: black}</string>
             </property>
            </widget>
           </item>
+          <item row="2" column="1">
+           <widget class="QComboBox" name="cbAreaUpdate">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Minimum">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>10</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QComboBox{background:white; color:black; font: 63 12pt &quot;Segoe UI Semibold&quot;;}
+</string>
+            </property>
+           </widget>
+          </item>
          </layout>
         </widget>
         <widget class="QComboBox" name="cbName">
@@ -1165,11 +1192,17 @@ QPushButton:hover{ background-color: gold; color: black}</string>
            <x>50</x>
            <y>140</y>
            <width>681</width>
-           <height>22</height>
+           <height>31</height>
           </rect>
          </property>
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>10</height>
+          </size>
+         </property>
          <property name="styleSheet">
-          <string notr="true">background: white;</string>
+          <string notr="true">QComboBox{background:white; color:black; font: 63 12pt &quot;Segoe UI Semibold&quot;;}</string>
          </property>
          <item>
           <property name="text">
@@ -1202,7 +1235,9 @@ QPushButton:hover{ background-color: gold; color: black}</string>
              </size>
             </property>
             <property name="styleSheet">
-             <string notr="true">background: rgb(39,39,39); color: #fff;</string>
+             <string notr="true">QPushButton{background: rgb(39,39,39); color: #fff; font: 63 10pt &quot;Segoe UI Semibold&quot;;;}
+
+QPushButton:hover{ background-color: gold; color: rgb(0, 0, 127); font: 87 12pt &quot;Segoe UI Black&quot;;}</string>
             </property>
             <property name="text">
              <string>Save</string>
@@ -1224,7 +1259,11 @@ QPushButton:hover{ background-color: gold; color: black}</string>
              </size>
             </property>
             <property name="styleSheet">
-             <string notr="true">background: rgb(39,39,39); color: #fff;</string>
+             <string notr="true">QPushButton{background: rgb(39,39,39); color: #fff;
+	font: 63 10pt &quot;Segoe UI Semibold&quot;;
+}
+QPushButton:hover{ background-color: rgb(166, 1, 1); color: white;
+	font: 63 12pt &quot;Segoe UI Semibold&quot;;}</string>
             </property>
             <property name="text">
              <string>Cancel</string>
