@@ -166,7 +166,7 @@ QPushButton:hover{ background-color: gold; color: black}</string>
      <item>
       <widget class="QStackedWidget" name="stackedWidget">
        <property name="currentIndex">
-        <number>0</number>
+        <number>2</number>
        </property>
        <widget class="QWidget" name="pgRegistro">
         <widget class="QLabel" name="label_2">
@@ -714,7 +714,7 @@ QPushButton:hover{ background-color: gold; color: black}</string>
           </property>
          </widget>
         </widget>
-        <widget class="QComboBox" name="comboBox">
+        <widget class="QComboBox" name="cbArea">
          <property name="geometry">
           <rect>
            <x>30</x>
@@ -1159,7 +1159,7 @@ QPushButton:hover{ background-color: gold; color: black}</string>
           </item>
          </layout>
         </widget>
-        <widget class="QComboBox" name="comboBox_2">
+        <widget class="QComboBox" name="cbName">
          <property name="geometry">
           <rect>
            <x>50</x>

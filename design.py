@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'mirallisDesign.ui'
+# Form implementation generated from reading ui file 'design.ui'
 #
 # Created by: PyQt5 UI code generator 5.15.2
 #
@@ -343,10 +343,10 @@ class Ui_Main(object):
         self.scrollAreaWidgetContents.setGeometry(QtCore.QRect(0, 0, 719, 529))
         self.scrollAreaWidgetContents.setObjectName("scrollAreaWidgetContents")
         self.scrollArea.setWidget(self.scrollAreaWidgetContents)
-        self.comboBox = QtWidgets.QComboBox(self.pgConsulta)
-        self.comboBox.setGeometry(QtCore.QRect(30, 130, 721, 22))
-        self.comboBox.setStyleSheet("background: white;")
-        self.comboBox.setObjectName("comboBox")
+        self.cbArea = QtWidgets.QComboBox(self.pgConsulta)
+        self.cbArea.setGeometry(QtCore.QRect(30, 130, 721, 22))
+        self.cbArea.setStyleSheet("background: white;")
+        self.cbArea.setObjectName("cbArea")
         self.stackedWidget.addWidget(self.pgConsulta)
         self.pgUpdate = QtWidgets.QWidget()
         self.pgUpdate.setObjectName("pgUpdate")
@@ -562,11 +562,11 @@ class Ui_Main(object):
         self.iptLink_2.setAlignment(QtCore.Qt.AlignCenter)
         self.iptLink_2.setObjectName("iptLink_2")
         self.formLayout_2.setWidget(7, QtWidgets.QFormLayout.FieldRole, self.iptLink_2)
-        self.comboBox_2 = QtWidgets.QComboBox(self.pgUpdate)
-        self.comboBox_2.setGeometry(QtCore.QRect(50, 140, 681, 22))
-        self.comboBox_2.setStyleSheet("background: white;")
-        self.comboBox_2.setObjectName("comboBox_2")
-        self.comboBox_2.addItem("")
+        self.cbName = QtWidgets.QComboBox(self.pgUpdate)
+        self.cbName.setGeometry(QtCore.QRect(50, 140, 681, 22))
+        self.cbName.setStyleSheet("background: white;")
+        self.cbName.setObjectName("cbName")
+        self.cbName.addItem("")
         self.horizontalLayoutWidget_2 = QtWidgets.QWidget(self.pgUpdate)
         self.horizontalLayoutWidget_2.setGeometry(QtCore.QRect(50, 540, 681, 101))
         self.horizontalLayoutWidget_2.setObjectName("horizontalLayoutWidget_2")
@@ -590,7 +590,7 @@ class Ui_Main(object):
         Main.setCentralWidget(self.centralwidget)
 
         self.retranslateUi(Main)
-        self.stackedWidget.setCurrentIndex(0)
+        self.stackedWidget.setCurrentIndex(2)
         QtCore.QMetaObject.connectSlotsByName(Main)
 
     def retranslateUi(self, Main):
@@ -621,6 +621,6 @@ class Ui_Main(object):
         self.label_18.setText(_translate("Main", "Telefone:"))
         self.label_19.setText(_translate("Main", "Telefone 2:"))
         self.label_20.setText(_translate("Main", "Link Website:"))
-        self.comboBox_2.setItemText(0, _translate("Main", "Escolha um fornecedor para atualizar"))
+        self.cbName.setItemText(0, _translate("Main", "Escolha um fornecedor para atualizar"))
         self.btSave_2.setText(_translate("Main", "Save"))
         self.btCancel_2.setText(_translate("Main", "Cancel"))
