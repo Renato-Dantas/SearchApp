@@ -18,7 +18,7 @@ class sqliteFunctions:
     def searchSqlArea(self, area):
         select = 'SELECT * FROM supplier WHERE area = ?'
         self.cursor.execute(select, [area])
-        data = cursor.fetchall()
+        data = self.cursor.fetchall()
         return data
     
     def searchSqlName(self, name):
@@ -31,6 +31,20 @@ class sqliteFunctions:
         update = 'UPDATE supplier SET id = ?, name = ?, area = ?, city = ?, email = ?, phone1 = ?, phone2 = ?, link = ? WHERE name = ?'
         self.cursor.execute(update, data)
         data = self.cursor.fetchall()
+
+    # Retorna uma lista com as áreas possíveis
+    def readTxt(self):
+        with open ('area.txt', encoding='UTF-8') as file:
+            areaList = []
+            for line in file:
+                areaList.append(line.strip('\n'))
+        return areaList
+
+    def searchListNames(self):
+        search = "SELECT name FROM supplier"
+        self.cursor.execute(search)
+        names = self.cursor.fetchall()
+        return names
 
     def closeConnection(self):
         self.cursor.close()
