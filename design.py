@@ -364,6 +364,17 @@ class Ui_Main(object):
         self.verticalLayout_4.setContentsMargins(0, 0, 0, 0)
         self.verticalLayout_4.setObjectName("verticalLayout_4")
         self.tableWidget = QtWidgets.QTableWidget(self.verticalLayoutWidget_4)
+        self.tableWidget.setStyleSheet("QTableWidget{background:rgb(44, 44, 44); \n"
+"color: gold;\n"
+"text-align: center;\n"
+"\n"
+"}\n"
+"\n"
+"")
+        self.tableWidget.setFrameShape(QtWidgets.QFrame.Box)
+        self.tableWidget.setFrameShadow(QtWidgets.QFrame.Sunken)
+        self.tableWidget.setLineWidth(5)
+        self.tableWidget.setGridStyle(QtCore.Qt.SolidLine)
         self.tableWidget.setObjectName("tableWidget")
         self.tableWidget.setColumnCount(8)
         self.tableWidget.setRowCount(0)
@@ -391,7 +402,7 @@ class Ui_Main(object):
         self.cbArea.setStyleSheet("QComboBox{background:white; color:black; font: 63 12pt \"Segoe UI Semibold\";}")
         self.cbArea.setObjectName("cbArea")
         self.btConsultar = QtWidgets.QPushButton(self.pgConsulta)
-        self.btConsultar.setGeometry(QtCore.QRect(540, 130, 201, 31))
+        self.btConsultar.setGeometry(QtCore.QRect(540, 130, 211, 31))
         self.btConsultar.setStyleSheet("QPushButton{color: #fff;}\n"
 "QPushButton:hover{ background-color: gold; color: black;font: 63 12pt \"Segoe UI Semibold\";}\n"
 "")
@@ -541,17 +552,17 @@ class Ui_Main(object):
         self.label_18.setFrameShadow(QtWidgets.QFrame.Raised)
         self.label_18.setObjectName("label_18")
         self.formLayout_2.setWidget(5, QtWidgets.QFormLayout.LabelRole, self.label_18)
-        self.inpTelefone_2 = QtWidgets.QLineEdit(self.formLayoutWidget_2)
+        self.iptTelefone_2 = QtWidgets.QLineEdit(self.formLayoutWidget_2)
         font = QtGui.QFont()
         font.setFamily("Segoe UI Semibold")
         font.setPointSize(14)
         font.setBold(True)
         font.setWeight(75)
-        self.inpTelefone_2.setFont(font)
-        self.inpTelefone_2.setStyleSheet("background: white; color: black;")
-        self.inpTelefone_2.setAlignment(QtCore.Qt.AlignCenter)
-        self.inpTelefone_2.setObjectName("inpTelefone_2")
-        self.formLayout_2.setWidget(5, QtWidgets.QFormLayout.FieldRole, self.inpTelefone_2)
+        self.iptTelefone_2.setFont(font)
+        self.iptTelefone_2.setStyleSheet("background: white; color: black;")
+        self.iptTelefone_2.setAlignment(QtCore.Qt.AlignCenter)
+        self.iptTelefone_2.setObjectName("iptTelefone_2")
+        self.formLayout_2.setWidget(5, QtWidgets.QFormLayout.FieldRole, self.iptTelefone_2)
         self.label_19 = QtWidgets.QLabel(self.formLayoutWidget_2)
         self.label_19.setMinimumSize(QtCore.QSize(200, 0))
         font = QtGui.QFont()
@@ -612,7 +623,7 @@ class Ui_Main(object):
         self.cbAreaUpdate.setObjectName("cbAreaUpdate")
         self.formLayout_2.setWidget(2, QtWidgets.QFormLayout.FieldRole, self.cbAreaUpdate)
         self.cbName = QtWidgets.QComboBox(self.pgUpdate)
-        self.cbName.setGeometry(QtCore.QRect(50, 140, 681, 31))
+        self.cbName.setGeometry(QtCore.QRect(50, 140, 461, 31))
         self.cbName.setMinimumSize(QtCore.QSize(0, 10))
         self.cbName.setStyleSheet("QComboBox{background:white; color:black; font: 63 12pt \"Segoe UI Semibold\";}")
         self.cbName.setObjectName("cbName")
@@ -623,30 +634,36 @@ class Ui_Main(object):
         self.horizontalLayout_2 = QtWidgets.QHBoxLayout(self.horizontalLayoutWidget_2)
         self.horizontalLayout_2.setContentsMargins(0, 0, 0, 0)
         self.horizontalLayout_2.setObjectName("horizontalLayout_2")
-        self.btSave_2 = QtWidgets.QPushButton(self.horizontalLayoutWidget_2)
-        self.btSave_2.setMinimumSize(QtCore.QSize(0, 50))
-        self.btSave_2.setMaximumSize(QtCore.QSize(200, 16777215))
-        self.btSave_2.setStyleSheet("QPushButton{background: rgb(39,39,39); color: #fff; font: 63 10pt \"Segoe UI Semibold\";;}\n"
+        self.btSaveUpdate = QtWidgets.QPushButton(self.horizontalLayoutWidget_2)
+        self.btSaveUpdate.setMinimumSize(QtCore.QSize(0, 50))
+        self.btSaveUpdate.setMaximumSize(QtCore.QSize(200, 16777215))
+        self.btSaveUpdate.setStyleSheet("QPushButton{background: rgb(39,39,39); color: #fff; font: 63 10pt \"Segoe UI Semibold\";;}\n"
 "\n"
 "QPushButton:hover{ background-color: gold; color: rgb(0, 0, 127); font: 87 12pt \"Segoe UI Black\";}")
-        self.btSave_2.setObjectName("btSave_2")
-        self.horizontalLayout_2.addWidget(self.btSave_2)
-        self.btCancel_2 = QtWidgets.QPushButton(self.horizontalLayoutWidget_2)
-        self.btCancel_2.setMinimumSize(QtCore.QSize(0, 50))
-        self.btCancel_2.setMaximumSize(QtCore.QSize(200, 16777215))
-        self.btCancel_2.setStyleSheet("QPushButton{background: rgb(39,39,39); color: #fff;\n"
+        self.btSaveUpdate.setObjectName("btSaveUpdate")
+        self.horizontalLayout_2.addWidget(self.btSaveUpdate)
+        self.btCancelUpdate = QtWidgets.QPushButton(self.horizontalLayoutWidget_2)
+        self.btCancelUpdate.setMinimumSize(QtCore.QSize(0, 50))
+        self.btCancelUpdate.setMaximumSize(QtCore.QSize(200, 16777215))
+        self.btCancelUpdate.setStyleSheet("QPushButton{background: rgb(39,39,39); color: #fff;\n"
 "    font: 63 10pt \"Segoe UI Semibold\";\n"
 "}\n"
 "QPushButton:hover{ background-color: rgb(166, 1, 1); color: white;\n"
 "    font: 63 12pt \"Segoe UI Semibold\";}")
-        self.btCancel_2.setObjectName("btCancel_2")
-        self.horizontalLayout_2.addWidget(self.btCancel_2)
+        self.btCancelUpdate.setObjectName("btCancelUpdate")
+        self.horizontalLayout_2.addWidget(self.btCancelUpdate)
+        self.btConsultar_2 = QtWidgets.QPushButton(self.pgUpdate)
+        self.btConsultar_2.setGeometry(QtCore.QRect(520, 140, 211, 31))
+        self.btConsultar_2.setStyleSheet("QPushButton{color: #fff;}\n"
+"QPushButton:hover{ background-color: gold; color: black;font: 63 12pt \"Segoe UI Semibold\";}\n"
+"")
+        self.btConsultar_2.setObjectName("btConsultar_2")
         self.stackedWidget.addWidget(self.pgUpdate)
         self.verticalLayout_3.addWidget(self.stackedWidget)
         Main.setCentralWidget(self.centralwidget)
 
         self.retranslateUi(Main)
-        self.stackedWidget.setCurrentIndex(1)
+        self.stackedWidget.setCurrentIndex(2)
         QtCore.QMetaObject.connectSlotsByName(Main)
 
     def retranslateUi(self, Main):
@@ -694,6 +711,8 @@ class Ui_Main(object):
         self.label_18.setText(_translate("Main", "Telefone:"))
         self.label_19.setText(_translate("Main", "Telefone 2:"))
         self.label_20.setText(_translate("Main", "Link Website:"))
+        self.cbName.setCurrentText(_translate("Main", "Escolha um fornecedor para atualizar"))
         self.cbName.setItemText(0, _translate("Main", "Escolha um fornecedor para atualizar"))
-        self.btSave_2.setText(_translate("Main", "Save"))
-        self.btCancel_2.setText(_translate("Main", "Cancel"))
+        self.btSaveUpdate.setText(_translate("Main", "Save"))
+        self.btCancelUpdate.setText(_translate("Main", "Cancel"))
+        self.btConsultar_2.setText(_translate("Main", "Consultar"))

@@ -22,7 +22,8 @@ class sqliteFunctions:
         return data
     
     def searchSqlName(self, name):
-        select = 'SELECT id,name,area,city,email,phone1,phone2,link FROM supplier WHERE name = ?'
+        #select = 'SELECT id,name,area,city,email,phone1,phone2,link FROM supplier WHERE name = ?'
+        select = 'SELECT * FROM supplier WHERE name = ?'
         self.cursor.execute(select, [name])
         data = self.cursor.fetchall()
         return data

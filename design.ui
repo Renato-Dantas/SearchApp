@@ -167,7 +167,7 @@ QPushButton:hover{ background-color: gold; color: black;font: 63 12pt &quot;Sego
      <item>
       <widget class="QStackedWidget" name="stackedWidget">
        <property name="currentIndex">
-        <number>1</number>
+        <number>2</number>
        </property>
        <widget class="QWidget" name="pgRegistro">
         <widget class="QLabel" name="label_2">
@@ -743,6 +743,27 @@ QPushButton:hover{ background-color: rgb(166, 1, 1); color: white;
            <layout class="QVBoxLayout" name="verticalLayout_4">
             <item>
              <widget class="QTableWidget" name="tableWidget">
+              <property name="styleSheet">
+               <string notr="true">QTableWidget{background:rgb(44, 44, 44); 
+color: gold;
+text-align: center;
+
+}
+
+</string>
+              </property>
+              <property name="frameShape">
+               <enum>QFrame::Box</enum>
+              </property>
+              <property name="frameShadow">
+               <enum>QFrame::Sunken</enum>
+              </property>
+              <property name="lineWidth">
+               <number>5</number>
+              </property>
+              <property name="gridStyle">
+               <enum>Qt::SolidLine</enum>
+              </property>
               <column>
                <property name="text">
                 <string>Código</string>
@@ -813,7 +834,7 @@ QPushButton:hover{ background-color: rgb(166, 1, 1); color: white;
           <rect>
            <x>540</x>
            <y>130</y>
-           <width>201</width>
+           <width>211</width>
            <height>31</height>
           </rect>
          </property>
@@ -1125,7 +1146,7 @@ QPushButton:hover{ background-color: gold; color: black;font: 63 12pt &quot;Sego
            </widget>
           </item>
           <item row="5" column="1">
-           <widget class="QLineEdit" name="inpTelefone_2">
+           <widget class="QLineEdit" name="iptTelefone_2">
             <property name="font">
              <font>
               <family>Segoe UI Semibold</family>
@@ -1265,7 +1286,7 @@ QPushButton:hover{ background-color: gold; color: black;font: 63 12pt &quot;Sego
           <rect>
            <x>50</x>
            <y>140</y>
-           <width>681</width>
+           <width>461</width>
            <height>31</height>
           </rect>
          </property>
@@ -1277,6 +1298,9 @@ QPushButton:hover{ background-color: gold; color: black;font: 63 12pt &quot;Sego
          </property>
          <property name="styleSheet">
           <string notr="true">QComboBox{background:white; color:black; font: 63 12pt &quot;Segoe UI Semibold&quot;;}</string>
+         </property>
+         <property name="currentText">
+          <string extracomment="Teste">Escolha um fornecedor para atualizar</string>
          </property>
          <item>
           <property name="text">
@@ -1295,7 +1319,7 @@ QPushButton:hover{ background-color: gold; color: black;font: 63 12pt &quot;Sego
          </property>
          <layout class="QHBoxLayout" name="horizontalLayout_2">
           <item>
-           <widget class="QPushButton" name="btSave_2">
+           <widget class="QPushButton" name="btSaveUpdate">
             <property name="minimumSize">
              <size>
               <width>0</width>
@@ -1319,7 +1343,7 @@ QPushButton:hover{ background-color: gold; color: rgb(0, 0, 127); font: 87 12pt 
            </widget>
           </item>
           <item>
-           <widget class="QPushButton" name="btCancel_2">
+           <widget class="QPushButton" name="btCancelUpdate">
             <property name="minimumSize">
              <size>
               <width>0</width>
@@ -1345,6 +1369,24 @@ QPushButton:hover{ background-color: rgb(166, 1, 1); color: white;
            </widget>
           </item>
          </layout>
+        </widget>
+        <widget class="QPushButton" name="btConsultar_2">
+         <property name="geometry">
+          <rect>
+           <x>520</x>
+           <y>140</y>
+           <width>211</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton{color: #fff;}
+QPushButton:hover{ background-color: gold; color: black;font: 63 12pt &quot;Segoe UI Semibold&quot;;}
+</string>
+         </property>
+         <property name="text">
+          <string>Consultar</string>
+         </property>
         </widget>
        </widget>
       </widget>

@@ -17,10 +17,13 @@ class main(QMainWindow, Ui_Main, sqliteFunctions):
         self.btUpdate.clicked.connect(lambda: self.stackedWidget.setCurrentWidget(self.pgUpdate))
         
 
-        self.btSave.clicked.connect(self.get_info)
+        self.btSave.clicked.connect(self.saveInfo)
         self.btCancel.clicked.connect(self.cancelAction)
 
         self.btConsultar.clicked.connect(self.showTable)
+        self.btConsultar_2.clicked.connect(self.consultarUpdate)
+        self.btCancelUpdate.clicked.connect(self.cancelActionUpdate)
+        self.btSaveUpdate.clicked.connect(self.infoUpdate)
 
         areaList = self.sql.readTxt()        
         for area in areaList:
@@ -67,9 +70,19 @@ class main(QMainWindow, Ui_Main, sqliteFunctions):
         self.iptLink.setText('')
         self.sql.selectAllData()
 
+    def cancelActionUpdate(self):
+        self.iptId_2.setText('')
+        self.iptNome_2.setText('')
+        self.cbAreaUpdate.setCurrentIndex(0)
+        self.iptCidade_2.setText('')
+        self.iptEmail_2.setText('')
+        self.iptTelefone_2.setText('')
+        self.iptTelefone2_2.setText('')
+        self.iptLink_2.setText('')
+
 
     # Função que pega os dados inseridos no formulário - Futuramente os dados serão enviados a um bando SQLite
-    def get_info(self):
+    def saveInfo(self):
         cod = self.iptId.text()
         nome = self.iptNome.text()
         area = self.cbAreaRegistro.currentText()
@@ -82,6 +95,33 @@ class main(QMainWindow, Ui_Main, sqliteFunctions):
         print(f'Código: {cod}\nArea: {area}\nCidade: {cidade}\nEmail: {email}\nFone: {fone1}\nFone2: {fone2}\nLink: {link}')
         info = [cod, nome, area, cidade, email, fone1, fone2, link]
         self.sql.insertValues(info)
+
+
+    def consultarUpdate(self):
+        nome = self.cbName.currentText()
+        data = self.sql.searchSqlName(nome)
+        data = list(data[0])
+        self.iptId_2.setText(str(data[0]))
+        self.iptNome_2.setText(data[1])
+        self.cbAreaUpdate.setCurrentText(data[2])
+        self.iptCidade_2.setText(data[3])
+        self.iptEmail_2.setText(data[4])
+        self.iptTelefone_2.setText(data[5])
+        self.iptTelefone2_2.setText(data[6])
+        self.iptLink_2.setText(data[7])
+
+    def infoUpdate(self):
+        nome_atual = self.cbName.currentText()
+        cod = self.iptId_2.text()
+        nome = self.iptNome_2.text()
+        area = self.cbAreaUpdate.currentText()
+        cidade = self.iptCidade_2.text()
+        email = self.iptEmail_2.text()
+        fone1 = self.iptTelefone_2.text()
+        fone2 = self.iptTelefone2_2.text()
+        link = self.iptLink_2.text()
+        info = [cod, nome, area, cidade, email, fone1, fone2, link, nome_atual]
+        self.sql.updateData(info)
 
 
 
