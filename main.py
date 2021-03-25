@@ -1,6 +1,6 @@
 #pyuic5 design.ui -o design.py
 from sys import argv
-from PyQt5.QtWidgets import QMainWindow, QApplication, QComboBox, QTableWidgetItem
+from PyQt5.QtWidgets import QMainWindow, QApplication, QComboBox, QTableWidgetItem, QMessageBox
 from design import Ui_Main
 from sqlStructure import sqliteFunctions
 
@@ -95,6 +95,7 @@ class main(QMainWindow, Ui_Main, sqliteFunctions):
         print(f'Código: {cod}\nArea: {area}\nCidade: {cidade}\nEmail: {email}\nFone: {fone1}\nFone2: {fone2}\nLink: {link}')
         info = [cod, nome, area, cidade, email, fone1, fone2, link]
         self.sql.insertValues(info)
+        self.popup('Fornecedor Registrado com sucesso!')
 
 
     def consultarUpdate(self):
@@ -122,7 +123,14 @@ class main(QMainWindow, Ui_Main, sqliteFunctions):
         link = self.iptLink_2.text()
         info = [cod, nome, area, cidade, email, fone1, fone2, link, nome_atual]
         self.sql.updateData(info)
+        self.popup('Dados Atualizados com sucesso!')
 
+    def popup(self, texto):
+        msg = QMessageBox()
+        msg.setWindowTitle("Saved!")
+        msg.setText(texto)
+        msg.setIcon(QMessageBox.Information)
+        msg.exec_()
 
 
 if __name__ == '__main__':
